@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Artifacts - Tanish Rajput</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 6rem auto 2rem;
+            padding: 0 2rem;
+            min-height: calc(100vh - 8rem);
+        }
+
+        .skills-section {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-content {
+            margin-bottom: 2rem;
+        }
+
+        .skill-text {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .artifacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .artifact {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .artifact:hover {
+            transform: translateY(-5px);
+        }
+
+        .artifact img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .artifact video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .skills-section {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            .artifacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            .skill-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="career.html">Career Statement</a>
+                <a href="resume.html">Resume</a>
+                <a href="skills.html">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Skills & Artifacts</h2>
+
+        <section class="skills-section">
+            <h3>Problem-Solving & Diagnostics</h3>
+            <div class="skill-content">
+                <p class="skill-text">
+                    One of my proudest experiences was diagnosing a difficult engine misfire issue that had stumped other shops. I used critical thinking and persistence to identify the failing fuel injector, successfully resolving the issue. This reinforced my problem-solving skills and patience under pressure. Rebuilding a full engine further tested my ability to follow technical specs and overcome frustration, while applying logic and precision to every step. These experiences strengthened my identity as a technician, and I now realize how vital these traits are as I transition into leadership roles in future business ventures.
+                </p>
+                <div class="artifacts-grid">
+                    <div class="artifact">
+                        <video src="artifact videos/video-thumbnail.mp4" controls></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h3>Communication & Customer Service</h3>
+            <div class="skill-content">
+                <p class="skill-text">
+                    Explaining technical repairs to customers in simple terms has sharpened my communication skills. Whether providing cost estimates or walking someone through a service issue, I've learned the value of clarity and empathy. During a community event, I also led volunteers and handled logistics, using teamwork and negotiation to keep the project on track. These experiences show I can connect with people, manage relationships, and earn trust — all essential for business success.
+                </p>
+                <div class="artifacts-grid">
+                    <div class="artifact">
+                        <img src="artifacts/store1.jpg" alt="Store front view">
+                    </div>
+                    <div class="artifact">
+                        <img src="artifacts/store2.jpg" alt="Customer interaction">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h3>Adaptability & Lifelong Learning</h3>
+            <div class="skill-content">
+                <p class="skill-text">
+                    The automotive industry is constantly evolving. I've actively sought to stay current by learning about hybrid/electric vehicle systems and advanced diagnostic software. This growth mindset has helped me build confidence in tackling unfamiliar challenges. Additionally, my reflections on Indigenous knowledge and ways of knowing taught me to approach learning holistically. I've learned that knowledge is shaped by environment and experience—key concepts that now influence how I study, lead, and grow. I plan to build on this by attending workshops and seeking further training.
+                </p>
+                <div class="artifacts-grid">
+                    <div class="artifact">
+                        <img src="my images/nature1.jpg" alt="Nature scene 2">
+                    </div>
+                    <div class="artifact">
+                        <img src="my images/nature3.jpg" alt="Nature scene 3">
+                    </div>
+                    <div class="artifact">
+                        <img src="my images/nature4.jpg" alt="Nature scene 4">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Tanish Rajput | AIS 299 Portfolio
+    </footer>
+</body>
+</html> 
