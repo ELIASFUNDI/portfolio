@@ -1,0 +1,41 @@
+# Temporary files
+tmpclaude-*
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Documentation files (not needed for live site)
+download-icons.html
+convert-maps.py
+MAP-CONVERSION-INSTRUCTIONS.txt
+PORTFOLIO-UPDATES.txt
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+# PDFs (we'll use JPG versions)
+*.pdf
+
+# Word documents
+*.docx
+
+# Large images that aren't used
+*.jpeg
+*.pptx
+
+# Keep only essential files for the live portfolio
+!index.html
+!styles.css
+!script.js
+!icons/*.svg
+!me.jpg
+!graduand.jpeg
+!LST Haiti.jpg
