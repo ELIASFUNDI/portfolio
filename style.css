@@ -370,7 +370,7 @@ footer a:hover { color: var(--color-text); }
   position: relative;
 }
 .project-detail-section ul li::before {
-  content: '—';
+  content: '·';
   position: absolute;
   left: 0;
   color: var(--color-tagline);
