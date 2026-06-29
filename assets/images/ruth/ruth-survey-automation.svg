@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="desk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e0d5"/>
+      <stop offset="100%" style="stop-color:#d5cab8"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf8f5"/>
+      <stop offset="100%" style="stop-color:#f0ece5"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2535"/>
+      <stop offset="100%" style="stop-color:#0f1820"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Desk surface -->
+  <rect width="800" height="600" fill="url(#desk)"/>
+
+  <!-- Subtle wood grain lines -->
+  <line x1="0" y1="120" x2="800" y2="140" stroke="#c8b89a" stroke-width="0.8" opacity="0.4"/>
+  <line x1="0" y1="280" x2="800" y2="295" stroke="#c8b89a" stroke-width="0.6" opacity="0.3"/>
+  <line x1="0" y1="440" x2="800" y2="450" stroke="#c8b89a" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Laptop / monitor -->
+  <rect x="390" y="80" width="360" height="230" rx="6" fill="#2a2a2a" filter="url(#shadow)"/>
+  <rect x="398" y="88" width="344" height="214" rx="3" fill="url(#screen)"/>
+
+  <!-- Screen content — code / terminal -->
+  <rect x="398" y="88" width="344" height="24" rx="0" fill="#1e1e2e"/>
+  <circle cx="413" cy="100" r="5" fill="#ff5f57" opacity="0.8"/>
+  <circle cx="428" cy="100" r="5" fill="#febc2e" opacity="0.8"/>
+  <circle cx="443" cy="100" r="5" fill="#28c840" opacity="0.8"/>
+  <text x="570" y="103" text-anchor="middle" font-family="monospace" font-size="8" fill="#666">survey_letter_gen.py</text>
+
+  <!-- Code lines -->
+  <text x="410" y="128" font-family="monospace" font-size="8.5" fill="#569cd6">def</text>
+  <text x="433" y="128" font-family="monospace" font-size="8.5" fill="#dcdcaa"> generate_letter</text>
+  <text x="541" y="128" font-family="monospace" font-size="8.5" fill="#d4d4d4">(parcel_data):</text>
+  <text x="418" y="143" font-family="monospace" font-size="8.5" fill="#6a9955">  # Load template</text>
+  <text x="418" y="157" font-family="monospace" font-size="8.5" fill="#d4d4d4">  doc = </text>
+  <text x="454" y="157" font-family="monospace" font-size="8.5" fill="#ce9178">Document</text>
+  <text x="502" y="157" font-family="monospace" font-size="8.5" fill="#d4d4d4">(template)</text>
+  <text x="418" y="171" font-family="monospace" font-size="8.5" fill="#d4d4d4">  fill_fields(doc, parcel_data)</text>
+  <text x="418" y="185" font-family="monospace" font-size="8.5" fill="#d4d4d4">  export_pdf(doc, output_dir)</text>
+  <text x="418" y="205" font-family="monospace" font-size="8.5" fill="#569cd6">for</text>
+  <text x="435" y="205" font-family="monospace" font-size="8.5" fill="#d4d4d4"> row </text>
+  <text x="456" y="205" font-family="monospace" font-size="8.5" fill="#569cd6">in</text>
+  <text x="468" y="205" font-family="monospace" font-size="8.5" fill="#d4d4d4"> parcels:</text>
+  <text x="418" y="219" font-family="monospace" font-size="8.5" fill="#d4d4d4">    generate_letter(row)</text>
+
+  <!-- Terminal / output pane -->
+  <rect x="398" y="234" width="344" height="68" fill="#0d1117"/>
+  <text x="408" y="249" font-family="monospace" font-size="8" fill="#3fb950">✓</text>
+  <text x="420" y="249" font-family="monospace" font-size="8" fill="#8b949e"> Generated: LR-2024-0421.pdf</text>
+  <text x="408" y="263" font-family="monospace" font-size="8" fill="#3fb950">✓</text>
+  <text x="420" y="263" font-family="monospace" font-size="8" fill="#8b949e"> Generated: LR-2024-0422.pdf</text>
+  <text x="408" y="277" font-family="monospace" font-size="8" fill="#3fb950">✓</text>
+  <text x="420" y="277" font-family="monospace" font-size="8" fill="#8b949e"> Generated: LR-2024-0423.pdf</text>
+  <text x="408" y="291" font-family="monospace" font-size="8" fill="#58a6ff">→</text>
+  <text x="420" y="291" font-family="monospace" font-size="8" fill="#58a6ff"> 47 letters complete in 3.2s_</text>
+
+  <!-- Laptop base -->
+  <rect x="360" y="310" width="420" height="14" rx="3" fill="#3a3a3a" filter="url(#shadow)"/>
+  <rect x="530" y="316" width="80" height="6" rx="2" fill="#555"/>
+
+  <!-- Stack of printed letters -->
+  <g transform="translate(30, 140)" filter="url(#shadow)">
+    <!-- Shadow layers -->
+    <rect x="6" y="8" width="280" height="360" rx="2" fill="#c8c0b0"/>
+    <rect x="3" y="4" width="280" height="360" rx="2" fill="#d8d0c0"/>
+    <!-- Top letter -->
+    <rect x="0" y="0" width="280" height="360" rx="2" fill="url(#paper)" stroke="#ddd" stroke-width="0.8"/>
+    <!-- Letterhead -->
+    <rect x="15" y="18" width="250" height="2" fill="#4a3e2e" opacity="0.8"/>
+    <text x="140" y="14" text-anchor="middle" font-family="serif" font-size="9" font-weight="bold" fill="#3a2e1e">REPUBLIC OF KENYA</text>
+    <text x="140" y="30" text-anchor="middle" font-family="serif" font-size="7.5" fill="#5a4e3e">MINISTRY OF LANDS AND PHYSICAL PLANNING</text>
+    <rect x="15" y="35" width="250" height="1" fill="#4a3e2e" opacity="0.4"/>
+
+    <!-- Ref number -->
+    <text x="20" y="52" font-family="monospace" font-size="8" fill="#4a3e2e">Ref: MNS/SRV/2024/0421</text>
+    <text x="200" y="52" font-family="monospace" font-size="8" fill="#4a3e2e">Date: 12/06/2024</text>
+
+    <!-- Body lines -->
+    <rect x="20" y="65" width="240" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="77" width="230" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="89" width="245" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="101" width="180" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+
+    <rect x="20" y="118" width="240" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="130" width="235" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="142" width="200" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="154" width="245" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="166" width="160" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+
+    <rect x="20" y="183" width="240" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="195" width="228" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="207" width="215" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+    <rect x="20" y="219" width="140" height="6" rx="1" fill="#c8c0b0" opacity="0.6"/>
+
+    <!-- Signature block -->
+    <text x="20" y="265" font-family="monospace" font-size="8" fill="#4a3e2e">Yours faithfully,</text>
+    <path d="M 20 295 Q 45 278 65 290 Q 80 300 95 285" fill="none" stroke="#2a2e6e" stroke-width="1.8"/>
+    <rect x="20" y="300" width="120" height="1" fill="#4a3e2e" opacity="0.5"/>
+    <text x="20" y="312" font-family="monospace" font-size="7.5" fill="#4a3e2e">County Surveyor</text>
+    <text x="20" y="323" font-family="monospace" font-size="7" fill="#6a5e4e">Mbeere North Sub-County</text>
+
+    <!-- Official stamp (circle) -->
+    <circle cx="220" cy="300" r="32" fill="none" stroke="#1a3a8a" stroke-width="1.8" opacity="0.35"/>
+    <circle cx="220" cy="300" r="26" fill="none" stroke="#1a3a8a" stroke-width="0.8" opacity="0.25"/>
+    <text x="220" y="296" text-anchor="middle" font-family="monospace" font-size="5.5" fill="#1a3a8a" opacity="0.4">SURVEY OFFICE</text>
+    <text x="220" y="306" text-anchor="middle" font-family="monospace" font-size="5.5" fill="#1a3a8a" opacity="0.4">MBEERE NORTH</text>
+  </g>
+
+  <!-- Ruler on desk -->
+  <rect x="30" y="510" width="300" height="14" rx="2" fill="#e8dcc8" stroke="#c0b090" stroke-width="1"/>
+  <line x1="60" y1="510" x2="60" y2="516" stroke="#8a7a5a" stroke-width="0.8"/>
+  <line x1="90" y1="510" x2="90" y2="516" stroke="#8a7a5a" stroke-width="0.8"/>
+  <line x1="120" y1="510" x2="120" y2="518" stroke="#8a7a5a" stroke-width="1.2"/>
+  <line x1="150" y1="510" x2="150" y2="516" stroke="#8a7a5a" stroke-width="0.8"/>
+  <line x1="180" y1="510" x2="180" y2="516" stroke="#8a7a5a" stroke-width="0.8"/>
+  <line x1="210" y1="510" x2="210" y2="518" stroke="#8a7a5a" stroke-width="1.2"/>
+  <line x1="240" y1="510" x2="240" y2="516" stroke="#8a7a5a" stroke-width="0.8"/>
+  <line x1="270" y1="510" x2="270" y2="516" stroke="#8a7a5a" stroke-width="0.8"/>
+  <line x1="300" y1="510" x2="300" y2="518" stroke="#8a7a5a" stroke-width="1.2"/>
+
+  <!-- Pen -->
+  <rect x="340" y="500" width="10" height="70" rx="3" fill="#2a2a4a" transform="rotate(-15, 345, 535)"/>
+  <polygon points="340,568 350,568 345,580" fill="#d4a820" transform="rotate(-15, 345, 574)"/>
+
+  <!-- Coffee mug suggestion -->
+  <ellipse cx="720" cy="490" rx="32" ry="10" fill="#8a7060" opacity="0.4"/>
+  <rect x="688" y="440" width="64" height="52" rx="6" fill="#5a4535" opacity="0.75"/>
+  <rect x="692" y="444" width="56" height="44" rx="4" fill="#3a2820" opacity="0.6"/>
+  <path d="M 752 455 Q 768 455 768 465 Q 768 475 752 475" fill="none" stroke="#5a4535" stroke-width="4" opacity="0.75"/>
+  <ellipse cx="720" cy="444" rx="32" ry="9" fill="#4a3528" opacity="0.6"/>
+  <!-- Steam -->
+  <path d="M 710 432 Q 713 424 710 416" fill="none" stroke="#e8ddd5" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 720 430 Q 723 422 720 414" fill="none" stroke="#e8ddd5" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 730 432 Q 733 424 730 416" fill="none" stroke="#e8ddd5" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+</svg>

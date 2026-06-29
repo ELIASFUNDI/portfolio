@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haiti Land Surface Temperature — Elias Fundi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <a class="site-name" href="../index.html">ELIAS FUNDI</a>
+      <p class="site-tagline">Geomatics &amp; GIS &nbsp;·&nbsp; Backend Dev</p>
+    </div>
+    <nav id="main-nav">
+      <a href="../index.html" class="active">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../../assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="https://www.linkedin.com/in/elias-fundi-40944b243" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <div class="project-detail">
+
+      <a class="project-back" href="../index.html">&#8592; &nbsp;All Work</a>
+
+      <h1 class="project-detail-title">Haiti Land Surface Temperature</h1>
+      <p class="project-detail-meta">2024 &nbsp;·&nbsp; Remote Sensing &nbsp;·&nbsp; QGIS · Landsat 8 · Thermal Band Analysis</p>
+
+      <p class="project-detail-lead">
+        Land surface temperature (LST) mapping of Haiti using Landsat 8 thermal infrared imagery. The analysis quantifies spatial variation in surface heat, revealing the thermal signature of urban areas, deforested zones, and vegetation cover across the country.
+      </p>
+
+      <div class="project-img-full">
+        <img src="../../assets/images/haiti/haiti-land-surface-temperature.jpg"
+             alt="Land surface temperature map of Haiti derived from Landsat 8 thermal infrared imagery">
+        <p class="img-caption">Land surface temperature — Haiti. Derived from Landsat 8 Band 10 (TIRS). Colour ramp: cool (blue) to hot (red/white).</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Background</h2>
+        <p>
+          Haiti has experienced significant deforestation and urban expansion over recent decades. LST mapping provides a measurable proxy for the effects of land cover change — urban heat islands form where vegetation is lost and impervious surfaces dominate. This analysis was conducted as part of broader remote sensing coursework exploring thermal remote sensing workflows.
+        </p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Methodology</h2>
+        <ul>
+          <li>Acquired Landsat 8 Level-2 imagery (surface temperature product, Band 10)</li>
+          <li>Applied radiometric calibration and atmospheric correction constants</li>
+          <li>Converted top-of-atmosphere radiance to brightness temperature in Kelvin, then Celsius</li>
+          <li>Derived emissivity correction using NDVI-based fractional vegetation estimates</li>
+          <li>Produced a classified LST map with a diverging colour ramp for clear thermal interpretation</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Key Findings</h2>
+        <ul>
+          <li>Port-au-Prince and surrounding urban zones registered the highest surface temperatures (&gt;42°C)</li>
+          <li>Deforested hillside areas showed markedly elevated LST compared to forested equivalents</li>
+          <li>Coastal wetlands and water bodies provided the lowest surface temperatures, acting as thermal buffers</li>
+          <li>Clear spatial correlation between low NDVI and high LST confirms vegetation-temperature relationship</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Tools</h2>
+        <ul>
+          <li>QGIS — image processing, band math, cartographic output</li>
+          <li>Landsat 8 TIRS (Band 10) — thermal infrared source imagery</li>
+          <li>USGS EarthExplorer — imagery acquisition</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://www.linkedin.com/in/elias-fundi-40944b243" target="_blank" rel="noopener">LinkedIn</a>
+    <span>Elias Fundi Njeru &nbsp;&middot;&nbsp; Geomatics Engineer &nbsp;&middot;&nbsp; Kenya</span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

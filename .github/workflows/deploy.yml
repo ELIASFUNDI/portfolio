@@ -1,0 +1,41 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare deploy folder
+        run: |
+          mkdir -p _deploy
+          # Copy site files to root
+          cp -r site/. _deploy/
+          # Copy assets alongside (so ../assets/ paths resolve correctly)
+          cp -r assets _deploy/assets
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _deploy
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
